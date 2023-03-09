@@ -11,7 +11,7 @@ module.exports = {
             var lastElementId = res.data[lastIndex-1]['id']
 
             console.log(res.data.length)
-            response.json({'Next Page Link': '', 'List of users': res.data})
+            response.json({'Next Page Link': 'https://backend-git-api.herokuapp.com/api/users?since='+lastElementId, 'List of users': res.data})
         }).catch((err) => {
             response.json(err)
         })
